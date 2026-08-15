@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdfdesk"
+version = "1.0.0"
+description = "초보자를 위한 오프라인 PDF 합치기·나누기 도구"
+requires-python = ">=3.10"
+dependencies = [
+  "pypdf>=6,<7",
+  "PySide6-Essentials>=6.8,<7",
+]
+
+[project.gui-scripts]
+pdfdesk = "main:main"
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6,<7"]
+
+[tool.setuptools]
+py-modules = ["main", "pdf_ops"]
